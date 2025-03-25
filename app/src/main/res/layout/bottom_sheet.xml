@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:hint="Email Adresse..."
+        android:id="@+id/email_add"
+        android:layout_margin="10sp"
+        app:boxStrokeColor="@color/button_color"
+        app:hintTextColor="@color/button_color"
+        app:cursorColor="@color/button_color"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+           />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:hint="Password..."
+       android:id="@+id/pass_add"
+        android:layout_margin="10sp"
+        app:boxStrokeColor="@color/button_color"
+        app:hintTextColor="@color/button_color"
+        app:cursorColor="@color/button_color"
+        >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pass"
+
+
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:text="Sign Up"
+        android:background="@drawable/shape_signup"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_marginBottom="16sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="10sp"
+        android:id="@+id/sign"
+        />
+</LinearLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                        <!-- Filter Icon -->
+                        <ImageView
+                            android:id="@+id/filter_top"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/_0862915_fi_br_bars_filter_icon"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- Avatar Image -->
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_man_avatar"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp" />
+
+                        <!-- Text Description -->
+                        <TextView
+                            android:id="@+id/del"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delicious food ready to\ndelivered for you"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginLeft="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/filter_top"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <!-- Search Bar -->
+                        <LinearLayout
+                            android:id="@+id/lne"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:padding="8dp"
+                            app:layout_constraintTop_toBottomOf="@id/del"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    app:cardCornerRadius="8dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="7dp"
+                                            android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="24dp"
+                                                    android:layout_height="24dp"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:src="@drawable/ic_search_icon" />
+
+                                                <EditText
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:inputType="text"
+                                                    android:hint="Search..."
+                                                    android:layout_marginTop="5dp"
+                                                    android:background="@android:color/transparent" />
+
+                                        </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <!-- Horizontal Scroll View -->
+                        <HorizontalScrollView
+                            android:id="@+id/scrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:scrollbars="none"
+                            app:layout_constraintTop_toBottomOf="@id/lne"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                        <!-- Buttons for Food Categories -->
+                                        <androidx.appcompat.widget.AppCompatButton
+                                            android:id="@+id/burger"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Burger"
+                                            android:layout_marginRight="16dp"
+                                            android:background="@drawable/shape_choices"
+                                            android:textAllCaps="false"
+                                            android:textColor="#fff"
+                                            android:layout_marginVertical="5dp" />
+
+                                        <androidx.appcompat.widget.AppCompatButton
+                                            android:id="@+id/pizza"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Pizza"
+                                            android:layout_marginRight="16dp"
+                                            android:background="@drawable/shape_choices_white"
+                                            android:textAllCaps="false"
+                                            android:layout_marginVertical="5dp" />
+
+                                        <androidx.appcompat.widget.AppCompatButton
+                                            android:id="@+id/soups"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Soups"
+                                            android:layout_marginRight="16dp"
+                                            android:background="@drawable/shape_choices_white"
+                                            android:textAllCaps="false"
+                                            android:layout_marginVertical="5dp" />
+
+                                        <androidx.appcompat.widget.AppCompatButton
+                                            android:id="@+id/salades"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Salades"
+                                            android:layout_marginRight="16dp"
+                                            android:background="@drawable/shape_choices_white"
+                                            android:textAllCaps="false"
+                                            android:layout_marginVertical="5dp" />
+
+                                        <androidx.appcompat.widget.AppCompatButton
+                                            android:id="@+id/drinks"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Drinks"
+                                            android:layout_marginRight="16dp"
+                                            android:background="@drawable/shape_choices_white"
+                                            android:textAllCaps="false"
+                                            android:layout_marginVertical="5dp" />
+                                </LinearLayout>
+                        </HorizontalScrollView>
+
+                        <!-- Most Popular Title -->
+                        <TextView
+                            android:id="@+id/mst"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Most Popular"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="24dp"
+                            app:layout_constraintTop_toBottomOf="@id/scrl"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <!-- RecyclerView for Food Lists -->
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/foods_Lists"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/mst"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:paddingBottom="60dp"
+                            app:layout_constraintRight_toRightOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/shape_bottom_navbar">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:id="@+id/home"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_home_nav_bar"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_hear_nav_bar"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_notification_nav_bar"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_cart_nav_bar"
+                    android:layout_weight="1" />
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

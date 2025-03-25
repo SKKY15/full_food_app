@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">food_full_app</string>
+    <string name="big_main_title1">The Fastest Food</string>
+    <string name="big_main_title2">Delivery App In Town</string>
+    <string name="seconday_main_title1">pick your desired food items from the menu</string>
+    <string name="secondary_main_title2">There are more than 200 items</string>
+    <string name="noacc">Don\'t have an account?</string>
+    <string name="signow">Sign in</string>
+    <string name="sign"><u>Sign Up</u></string>
+    <string name="main_text">Title</string>
+    <string name="second_text">Secondary</string>
+    <string name="price">Price$</string>
+</resources>
